@@ -1,12 +1,4 @@
-"""
-store.py
---------
-In-memory vector store backed by a numpy matrix.
-
-Why not Chroma / FAISS? For a hackathon prototype with < 50k chunks, a plain
-numpy dot-product is fast enough (<10 ms) and has zero extra dependencies.
-We persist the matrix to disk so we survive page reloads.
-"""
+"""Numpy-backed vector store with disk persistence. Fast enough for prototype scale."""
 
 from __future__ import annotations
 import json

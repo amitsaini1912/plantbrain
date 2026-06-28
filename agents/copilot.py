@@ -1,15 +1,4 @@
-"""
-copilot.py
-----------
-Expert Knowledge Copilot — RAG-powered Q&A over the industrial document corpus.
-
-Flow:
-  1. Embed the user question
-  2. Retrieve top-k chunks from the vector store
-  3. Build a concise context block with source citations
-  4. Call Claude with a domain-specific system prompt
-  5. Return the answer + the source chunks used (so the UI can cite them)
-"""
+"""RAG-powered Q&A agent. Embeds the question, retrieves top-k chunks, calls Claude."""
 
 from __future__ import annotations
 import anthropic

@@ -1,12 +1,4 @@
-"""
-embedder.py
------------
-Thin wrapper around a sentence-transformers model.
-
-We load the model once and reuse it across the session. Using all-MiniLM-L6-v2:
-  - 384 dimensions, fast inference, good retrieval quality for technical text
-  - Runs fully locally, no API quota consumed on embedding
-"""
+"""Singleton wrapper around sentence-transformers; loads once and reuses across the session."""
 
 from __future__ import annotations
 import numpy as np

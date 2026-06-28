@@ -1,21 +1,8 @@
-"""
-loader.py
----------
-Reads a document from disk and extracts its raw text.
-
-The job of the loader is narrow and important: take ONE file (PDF, Word, or
-plain text) and return a list of "records". Each record is one logical unit of
-the document (a PDF page, or a whole Word file) plus the metadata we need later
-to cite it: the source filename and the page number.
-
-We keep page numbers because the whole point of PlantBrain is trustworthy,
-*citable* answers — "see page 7 of the pump manual", not "the AI said so".
-"""
+"""Loads PDF, DOCX, and TXT files into a list of {text, source, page} records."""
 
 from pathlib import Path
 
-# PyMuPDF is imported as `fitz`. On some newer builds the module is `pymupdf`,
-# so we fall back gracefully and the rest of the code never has to care.
+# PyMuPDF ships as either `fitz` or `pymupdf` depending on build
 try:
     import fitz  # PyMuPDF
 except ImportError:  # pragma: no cover
@@ -55,8 +42,6 @@ def _load_txt(path: str) -> list[dict]:
     return [{"text": text, "source": Path(path).name, "page": None}]
 
 
-# Map each file extension to the function that knows how to read it.
-# Adding a new format later = add one function and one line here.
 LOADERS = {".pdf": _load_pdf, ".docx": _load_docx, ".txt": _load_txt}
 
 

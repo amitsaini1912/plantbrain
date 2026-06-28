@@ -1,8 +1,4 @@
-"""
-PlantBrain – AI for Industrial Knowledge Intelligence
-PS8: Unified Asset & Operations Brain
-ET AI Hackathon 2026
-"""
+"""PlantBrain — Streamlit frontend."""
 
 import streamlit as st
 import pandas as pd
@@ -18,9 +14,9 @@ from agents.compliance import run_compliance_check
 from agents.rca import run_rca
 from graph.builder import KnowledgeGraph
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Page config — must be the very first Streamlit call
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 st.set_page_config(
     page_title=APP_NAME,
     page_icon="🏭",
@@ -28,9 +24,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Custom CSS — dark industrial theme
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 st.markdown("""
 <style>
   .metric-card {
@@ -50,9 +46,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Session-state initialisation
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 def _init_state():
     defaults = {
         "chunks": [],
@@ -70,9 +66,9 @@ def _init_state():
 
 _init_state()
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Singleton helpers (cached so they load once per session)
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 @st.cache_resource(show_spinner="Loading embedding model…")
 def _get_embedder():
     return Embedder.get()
@@ -88,9 +84,9 @@ store    = _get_store()
 if store.count() > 0 and not st.session_state.store_ready:
     st.session_state.store_ready = True
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Helper: ingest a file, embed, store, extract entities
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 def _process_file(path: str, filename: str) -> int:
     chunks = ingest_file(path)
     if not chunks:
@@ -106,9 +102,9 @@ def _process_file(path: str, filename: str) -> int:
     st.session_state.store_ready = True
     return len(chunks)
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Sidebar
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/factory.png", width=64)
     st.title(APP_NAME)
@@ -158,9 +154,9 @@ with st.sidebar:
     st.divider()
     st.caption("PS8 · ET AI Hackathon 2026")
 
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 # Main tabs
-# ─────────────────────────────────────────────────────────────────────────────
+# ---
 tab_copilot, tab_graph, tab_maint, tab_comply, tab_docs = st.tabs([
     "💬 Knowledge Copilot",
     "🕸️ Knowledge Graph",
@@ -170,9 +166,7 @@ tab_copilot, tab_graph, tab_maint, tab_comply, tab_docs = st.tabs([
 ])
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # TAB 1 – KNOWLEDGE COPILOT
-# ═══════════════════════════════════════════════════════════════════════════════
 with tab_copilot:
     st.subheader("Expert Knowledge Copilot")
     st.caption(
@@ -248,9 +242,7 @@ with tab_copilot:
                 st.rerun()
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # TAB 2 – KNOWLEDGE GRAPH
-# ═══════════════════════════════════════════════════════════════════════════════
 with tab_graph:
     st.subheader("Asset & Operations Knowledge Graph")
     st.caption(
@@ -304,9 +296,7 @@ with tab_graph:
                     st.caption("No relationships mapped yet.")
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # TAB 3 – MAINTENANCE INTELLIGENCE & RCA
-# ═══════════════════════════════════════════════════════════════════════════════
 with tab_maint:
     st.subheader("Maintenance Intelligence & Root Cause Analysis")
     st.caption(
@@ -389,9 +379,7 @@ with tab_maint:
                         st.caption(c["text"][:250] + "…")
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # TAB 4 – COMPLIANCE MONITOR
-# ═══════════════════════════════════════════════════════════════════════════════
 with tab_comply:
     st.subheader("Regulatory Compliance Monitor")
     st.caption(
@@ -461,9 +449,7 @@ with tab_comply:
                             st.markdown(f"**Evidence:** *{r['evidence']}*")
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
 # TAB 5 – DOCUMENTS
-# ═══════════════════════════════════════════════════════════════════════════════
 with tab_docs:
     st.subheader("Document Management")
     st.caption(

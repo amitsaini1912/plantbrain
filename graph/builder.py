@@ -1,18 +1,4 @@
-"""
-builder.py
-----------
-Builds and renders the equipment-procedure-regulation knowledge graph.
-
-Node types (colour coded in the UI):
-  equipment   → red      (#e74c3c)
-  regulation  → blue     (#2980b9)
-  process     → green    (#27ae60)
-  parameter   → orange   (#e67e22)
-  location    → purple   (#8e44ad)
-
-We use networkx for graph operations and pyvis for the HTML render so the
-Streamlit component can embed it as an iframe.
-"""
+"""NetworkX knowledge graph with typed nodes; pyvis renders an interactive HTML iframe."""
 
 from __future__ import annotations
 from pathlib import Path

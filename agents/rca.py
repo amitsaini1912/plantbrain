@@ -1,14 +1,4 @@
-"""
-rca.py
-------
-Maintenance Intelligence & Root Cause Analysis agent.
-
-Given a failure description and the knowledge base, Claude:
-  1. Identifies the most likely root cause(s) from equipment history
-  2. Cross-references OEM manuals and past incidents
-  3. Recommends corrective and preventive actions (CAPA)
-  4. Returns a structured RCA report
-"""
+"""Root Cause Analysis agent — retrieves relevant history and asks Claude to produce a CAPA report."""
 
 from __future__ import annotations
 import anthropic

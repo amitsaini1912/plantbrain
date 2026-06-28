@@ -1,23 +1,4 @@
-"""
-chunker.py
-----------
-Splits a long piece of text into smaller, overlapping "chunks".
-
-WHY CHUNK AT ALL?
-A page of a manual can be thousands of characters. If we search and feed an
-entire page to the AI, retrieval gets fuzzy and we waste the AI's context.
-Instead we break text into ~1000-character pieces. When a user asks a question,
-we find the few *most relevant chunks* and answer from just those.
-
-WHY OVERLAP?
-If we cut text into clean, non-overlapping blocks, a sentence that explains an
-important fact might get split across the boundary and lost. By letting each
-chunk repeat the last ~150 characters of the previous one, no idea falls through
-the cracks between two chunks.
-
-We also try to end each chunk at a sentence boundary (a full stop) instead of
-slicing mid-word, which keeps chunks readable and improves search quality.
-"""
+"""Sliding-window text chunker with sentence-boundary alignment and configurable overlap."""
 
 import re
 

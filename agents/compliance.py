@@ -1,21 +1,4 @@
-"""
-compliance.py
--------------
-Quality & Regulatory Compliance Agent.
-
-Given the documents in the knowledge base, Claude checks them against a set of
-built-in regulatory requirements (Factory Act, OISD, PESO) and surfaces gaps.
-
-Each finding is:
-  {
-    "regulation": "OISD-GDN-192 Clause 4.3",
-    "requirement": "Flame-proof electrical equipment in Zone-1 areas",
-    "status":      "COMPLIANT | GAP | UNKNOWN",
-    "evidence":    "Source doc passage that supports the finding",
-    "source":      "filename",
-    "recommendation": "..."
-  }
-"""
+"""Checks the document corpus against Factory Act, OISD, and PESO requirements."""
 
 from __future__ import annotations
 import json
