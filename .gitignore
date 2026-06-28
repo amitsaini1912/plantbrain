@@ -3,11 +3,12 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.pyd
 
 # Secrets
 .env
 
-# App data / vector store
+# App data / vector store (generated at runtime — not committed)
 store/
 data/
 *.sqlite3
@@ -16,3 +17,6 @@ data/
 .DS_Store
 .idea/
 .vscode/
+
+# Keep sample_docs in repo (needed for demo)
+!sample_docs/

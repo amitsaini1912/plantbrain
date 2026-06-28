@@ -1,2 +1,13 @@
-streamlit
+streamlit>=1.35
 python-dotenv
+pymupdf
+python-docx
+reportlab
+anthropic>=0.29
+sentence-transformers>=3.0
+numpy>=1.26
+networkx>=3.3
+pyvis>=0.3.2
+plotly>=5.22
+pandas>=2.2
+scikit-learn>=1.5

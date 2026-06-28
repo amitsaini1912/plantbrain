@@ -1,8 +1,8 @@
-"""Central configuration. Keep all tunable constants in one place."""
+"""Central configuration — keep all tunable constants in one place."""
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Load secrets from a local .env file (we create that next step; never commit it).
 load_dotenv()
 
 # --- Identity ---
@@ -11,10 +11,21 @@ APP_TAGLINE = "Industrial Knowledge Intelligence — your unified asset & operat
 
 # --- Paths (auto-created if missing) ---
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"     # uploaded source documents
-STORE_DIR = BASE_DIR / "store"   # vector database lives here
+DATA_DIR = BASE_DIR / "data"
+STORE_DIR = BASE_DIR / "store"
+SAMPLE_DIR = BASE_DIR / "sample_docs"
 DATA_DIR.mkdir(exist_ok=True)
 STORE_DIR.mkdir(exist_ok=True)
 
-# --- Keys (we wire this up in the next step) ---
-# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# --- LLM ---
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+LLM_MODEL = "claude-sonnet-4-6"
+
+# --- Embeddings ---
+EMBED_MODEL = "all-MiniLM-L6-v2"   # 384-dim, fast, good for industrial text
+EMBED_DIM   = 384
+TOP_K       = 6                      # chunks returned per RAG query
+
+# --- Chunking ---
+CHUNK_SIZE  = 1000
+CHUNK_OVERLAP = 150
