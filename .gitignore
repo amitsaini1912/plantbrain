@@ -20,3 +20,7 @@ data/
 
 # Keep sample_docs in repo (needed for demo)
 !sample_docs/
+
+# Generated files
+generate_submission_doc.py
+*.pdf
