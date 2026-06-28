@@ -1,0 +1,54 @@
+MAINTENANCE WORK ORDER LOG – UNIT 2 COKER FEED SECTION
+Export: CMMS v4.2  |  Period: Jan 2023 – Dec 2024
+
+WO#     | Date       | Equipment | Priority | Type      | Description                                   | Status   | Technician
+--------|------------|-----------|----------|-----------|-----------------------------------------------|----------|------------
+WO#8821 | 2023-02-14 | P-101     | HIGH     | CM        | Mechanical seal failure; detected by seal pot  | Closed   | Rajan K
+                                                           overflow. Root cause: cavitation. D-204 level
+                                                           was 32% at time of failure. Replaced seal
+                                                           (Item 433). Recommended install LI-2204 low-
+                                                           level interlock.
+WO#8890 | 2023-03-21 | D-204     | MED      | PM        | Annual vessel inspection per IBR. Thickness    | Closed   | TPIA – Bureau Veritas
+                                                           readings within tolerance. Corrosion allowance
+                                                           remaining: 3.2 mm. Next inspection due 2025-03.
+WO#9034 | 2023-07-09 | P-101     | HIGH     | CM        | Second seal failure within 5 months. Vibration | Closed   | Rajan K / Singh A
+                                                           VT-2101A reading 8.9 mm/s prior to failure.
+                                                           Bearing also replaced (Item 321). RCA initiated
+                                                           (see RCA#2023-04). Suspected cavitation again.
+WO#9155 | 2023-09-12 | HE-301    | MED      | PM        | Bundle pulled for cleaning. Fouling factor    | Closed   | Patel S
+                                                           above design. Cleaned with high-pressure water.
+                                                           Performance restored. Schedule next clean
+                                                           in 8 months.
+WO#9312 | 2023-11-28 | V-302     | HIGH     | CM        | Pressure relief valve PSV-3021 found stuck    | Closed   | Mehta R
+                                                           open during plant walk. Replaced PSV-3021.
+                                                           Investigated: inlet accumulation of polymer
+                                                           deposit. Recommend monthly functional test.
+WO#9412 | 2024-01-17 | P-101     | HIGH     | CM        | Third seal failure. LI-2204 interlock still   | Closed   | Rajan K
+                                                           not installed (pending instrumentation budget).
+                                                           D-204 at 28% when failure occurred. URGENT:
+                                                           install LI-2204 before next startup per
+                                                           RCA#2024-07 recommendation.
+WO#9501 | 2024-03-05 | P-101S    | MED      | PM        | Standby pump alternation and function test.   | Closed   | Singh A
+                                                           P-101S started and ran for 4 hours. No issues.
+WO#9620 | 2024-05-20 | H-301     | HIGH     | CM        | Tube skin thermocouple TE-3015 failed. Replaced| Closed  | Sharma D
+                                                           TE-3015. No process impact during repair.
+WO#9788 | 2024-08-14 | P-101     | HIGH     | CM        | LI-2204 interlock FINALLY installed. Function  | Closed  | Instrumentation team
+                                                           tested: low-level trip at 35%, alarm at 40%.
+                                                           P-101 seal failures expected to reduce
+                                                           significantly. Close out RCA#2024-07.
+WO#9901 | 2024-10-02 | C-401     | HIGH     | PM        | Annual column inspection. Trays 12-14         | Closed   | Inspection team
+                                                           showing erosion; replaced tray 13. Corrosion
+                                                           inhibitor injection rate increased per
+                                                           recommendation of corrosion engineer.
+WO#9998 | 2024-11-30 | P-101     | LOW      | PM        | Routine annual PM overhaul. No seal or        | Closed   | Rajan K
+                                                           bearing replacement required this year —
+                                                           first clean overhaul since LI-2204 installed.
+                                                           Confirms cavitation was root cause of prior
+                                                           failures.
+
+SUMMARY STATISTICS (P-101, 2023-2024):
+  Corrective maintenance events: 4
+  Preventive maintenance events: 1
+  Mean Time Between Failures (before LI-2204): 5.1 months
+  Mean Time Between Failures (after LI-2204):  > 14 months (ongoing)
+  Total downtime cost (estimated): INR 42 Lakhs

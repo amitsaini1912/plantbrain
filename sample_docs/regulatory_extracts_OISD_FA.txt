@@ -1,0 +1,63 @@
+REGULATORY REFERENCE EXTRACTS – PlantBrain Knowledge Base
+Compiled for: Unit 2 Coker Feed Section
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OISD-GDN-192: MANAGEMENT OF CHANGE & SIMULTANEOUS OPERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Section 4.3 – Permit-to-Work System
+  A formal, documented Permit-to-Work (PTW) system shall be implemented for the following
+  high-risk activities: hot work, confined space entry, energy isolation (LOTO), height work,
+  radiography, and excavation. The PTW system shall be audited annually by a qualified safety
+  officer. No work may commence without a valid, signed permit.
+
+Section 5.1 – Simultaneous Operations (SIMOPS)
+  Before issuing any permit, the Area Authority shall consult the SIMOPS register to identify
+  any concurrently active permits in overlapping geographic zones. Where incompatible operations
+  are identified (e.g., hot work adjacent to confined space entry, or pressure testing adjacent
+  to mechanical work), the Area Authority shall either sequence the activities or obtain written
+  approval from the Plant Manager with documented risk controls. A SIMOPS coordinator role
+  shall be designated on each shift.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OISD-STD-116: SAFE HANDLING OF HAZARDOUS CHEMICALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Section 7 – Confined Space Entry
+  Atmospheric testing is mandatory before and continuously during confined space entry:
+    Oxygen:               19.5 % minimum, 23.5 % maximum
+    Flammable gas:        < 10 % LEL (Lower Explosive Limit)
+    H₂S:                  < 10 ppm TWA
+    CO:                   < 35 ppm TWA
+  Testing instruments shall be calibrated within the preceding 6 months and bump-tested
+  on the day of use. Results shall be recorded on the CSEP form.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FACTORIES ACT 1948 – RELEVANT SECTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Section 36 & 36A – Precautions against dangerous fumes
+  No person shall be required to enter any chamber, tank, vat, pit, pipe, flue, or similar
+  confined space in which dangerous fumes are likely to be present unless it is provided with
+  a manhole, or other means of egress, and unless a responsible person has certified, after
+  adequate inspection, that the place is safe for entry.
+
+Section 41 – Safety Audit for Hazardous Processes
+  Every occupier carrying on a hazardous process shall conduct a safety audit of the process
+  at least once in every two years by a qualified safety auditor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PESO – STATIC EQUIPMENT INSPECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Pressure vessels operating above 1 kg/cm² shall be inspected under the Indian Boiler
+Regulations (IBR) schedule. Records of all inspections, including thickness readings and
+weld condition, shall be maintained on site and available for inspection by the Chief Inspector
+of Factories. Vessels approaching corrosion allowance shall be de-rated or replaced.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OISD-STD-144: HOT WORK IN OIL & GAS INDUSTRY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Section 4 – Hot Work Permit Requirements
+  Every hot-work permit shall specify:
+    a. Gas test result at the work location (must be < 10% LEL)
+    b. Standby fire extinguisher (minimum 9 kg DCP) positioned at work site
+    c. Fire watcher assigned and named on the permit
+    d. Hot work to cease if LEL reading rises above 10% at any time
+  Hot-work permits are valid for one shift only (maximum 8 hours) and must be renewed.
