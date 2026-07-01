@@ -69,7 +69,7 @@ _init_state()
 # ---
 # Singleton helpers (cached so they load once per session)
 # ---
-@st.cache_resource(show_spinner="Loading embedding model…")
+@st.cache_resource(show_spinner="Initialising search engine…")
 def _get_embedder():
     return Embedder.get()
 

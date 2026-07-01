@@ -1,16 +1,21 @@
-"""Singleton wrapper around sentence-transformers; loads once and reuses across the session."""
+"""TF-IDF embedder using sklearn — no model download, loads instantly."""
 
 from __future__ import annotations
 import numpy as np
-from config import EMBED_MODEL
+from sklearn.feature_extraction.text import HashingVectorizer
+from config import EMBED_DIM
 
 
 class Embedder:
     _instance: "Embedder | None" = None
 
     def __init__(self) -> None:
-        from sentence_transformers import SentenceTransformer
-        self._model = SentenceTransformer(EMBED_MODEL)
+        self._vec = HashingVectorizer(
+            n_features=EMBED_DIM,
+            norm="l2",
+            alternate_sign=False,
+            ngram_range=(1, 2),
+        )
 
     @classmethod
     def get(cls) -> "Embedder":
@@ -19,15 +24,8 @@ class Embedder:
         return cls._instance
 
     def embed(self, texts: list[str]) -> np.ndarray:
-        """Return a (N, 384) float32 matrix of L2-normalised embeddings."""
-        vecs = self._model.encode(
-            texts,
-            batch_size=32,
-            show_progress_bar=False,
-            normalize_embeddings=True,   # cosine sim becomes a dot product
-            convert_to_numpy=True,
-        )
-        return vecs.astype(np.float32)
+        sparse = self._vec.transform(texts)
+        return np.asarray(sparse.todense(), dtype=np.float32)
 
     def embed_one(self, text: str) -> np.ndarray:
         return self.embed([text])[0]
